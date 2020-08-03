@@ -1,12 +1,13 @@
 package com.test.globallogic.dto;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class UserDTO {
 	private String name;
 	private String email;
 	private String password;
-	ArrayList<Phone> phones;
+	List<Phone> phones;
+	
 	public String getName() {
 		return name;
 	}
@@ -25,10 +26,10 @@ public class UserDTO {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public ArrayList<Phone> getPhones() {
+	public List<Phone> getPhones() {
 		return phones;
 	}
-	public void setPhones(ArrayList<Phone> phones) {
+	public void setPhones(List<Phone> phones) {
 		this.phones = phones;
 	}
 	

@@ -23,7 +23,7 @@ public class ControllerUser {
 	@ResponseBody
 	public ResponseEntity<HttpStatus> createUser(@RequestBody UserDTO user) throws Exception {
 		
-		System.out.println("HOLA"+user);
+		userService.createUser(user);
 		return ResponseEntity.ok(HttpStatus.OK);
 	}
 }

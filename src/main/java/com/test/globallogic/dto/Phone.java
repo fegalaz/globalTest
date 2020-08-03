@@ -2,26 +2,25 @@ package com.test.globallogic.dto;
 
 public class Phone {
 	
-	private Integer number;
-	private Integer cityCode;
-	private Integer countryCode;
-	
-	public Integer getNumber() {
+	private String number;
+	private String cityCode;
+	private String countryCode;
+	public String getNumber() {
 		return number;
 	}
-	public void setNumber(Integer number) {
+	public void setNumber(String number) {
 		this.number = number;
 	}
-	public Integer getCityCode() {
+	public String getCityCode() {
 		return cityCode;
 	}
-	public void setCityCode(Integer cityCode) {
+	public void setCityCode(String cityCode) {
 		this.cityCode = cityCode;
 	}
-	public Integer getCountryCode() {
+	public String getCountryCode() {
 		return countryCode;
 	}
-	public void setCountryCode(Integer countryCode) {
+	public void setCountryCode(String countryCode) {
 		this.countryCode = countryCode;
 	}
 	
