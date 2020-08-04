@@ -1,6 +1,7 @@
 package com.test.globallogic.model;
 
-import java.util.ArrayList;
+import java.sql.Date;
+import java.time.LocalDateTime;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -11,8 +12,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
-import org.hibernate.mapping.List;
 
 
 @Entity
@@ -31,6 +30,9 @@ public class User {
 	
 	@Column(name = "password")
 	private String password;
+	
+	@Column(name = "created")
+	private LocalDateTime created;
 	
 	@OneToMany(
 	        mappedBy = "user",
@@ -77,6 +79,14 @@ public class User {
 
 	public void setPhones(Set<Phones> phones) {
 		this.phones = phones;
+	}
+
+	public LocalDateTime getCreated() {
+		return created;
+	}
+
+	public void setCreated(LocalDateTime created) {
+		this.created = created;
 	}
 	
 	

@@ -4,7 +4,10 @@ CREATE TABLE user (
   id INT AUTO_INCREMENT  PRIMARY KEY,
   name VARCHAR(250) NOT NULL,
   email VARCHAR(250) NOT NULL,
-  password VARCHAR(250) DEFAULT NULL
+  password VARCHAR(250) DEFAULT NULL,
+  created DATE NOT NULL,
+  modified DATE NOT NULL,
+  isactive char NOT NULL
 );
 
 CREATE TABLE phones (

@@ -3,11 +3,18 @@ package com.test.globallogic.dto;
 import java.util.List;
 
 public class UserDTO {
+	private Integer id;
 	private String name;
 	private String email;
 	private String password;
-	List<Phone> phones;
+	List<PhoneDTO> phoneDTOs;
 	
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
 	public String getName() {
 		return name;
 	}
@@ -26,11 +33,11 @@ public class UserDTO {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public List<Phone> getPhones() {
-		return phones;
+	public List<PhoneDTO> getPhones() {
+		return phoneDTOs;
 	}
-	public void setPhones(List<Phone> phones) {
-		this.phones = phones;
+	public void setPhones(List<PhoneDTO> phoneDTOs) {
+		this.phoneDTOs = phoneDTOs;
 	}
 	
 	

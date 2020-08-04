@@ -1,6 +1,6 @@
 package com.test.globallogic.dto;
 
-public class Phone {
+public class PhoneDTO {
 	
 	private String number;
 	private String cityCode;

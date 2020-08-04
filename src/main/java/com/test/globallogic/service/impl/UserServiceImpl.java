@@ -1,5 +1,7 @@
 package com.test.globallogic.service.impl;
 
+import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -7,7 +9,7 @@ import java.util.Set;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.test.globallogic.dto.Phone;
+import com.test.globallogic.dto.PhoneDTO;
 import com.test.globallogic.dto.UserDTO;
 import com.test.globallogic.model.Phones;
 import com.test.globallogic.model.User;
@@ -23,11 +25,11 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public UserDTO createUser(UserDTO userResquest) {
 		User newUser = new User();
-		
 		newUser.setEmail(userResquest.getEmail());
 		newUser.setName(userResquest.getName());
 		newUser.setPassword(userResquest.getPassword());
-		List<Phone> listPhones = userResquest.getPhones();
+		newUser.setCreated(LocalDateTime.now());
+		List<PhoneDTO> listPhones = userResquest.getPhones();
 		Set<Phones> newPhones = new HashSet<Phones>();
 		listPhones.forEach(s -> {
 			Phones phs = new Phones();
@@ -37,8 +39,23 @@ public class UserServiceImpl implements UserService {
 			newPhones.add(phs);
 			newUser.setPhones(newPhones);
 		});
-		User respond = userRepository.save(newUser);
-		return null;
+		User rsp = userRepository.save(newUser);
+		
+		UserDTO userRespond = new UserDTO();
+		userRespond.setId(rsp.getId());
+		userRespond.setEmail(rsp.getEmail());
+		userRespond.setName(rsp.getName());
+		userRespond.setPassword(rsp.getPassword());
+		List<PhoneDTO> phrespond = new ArrayList<>();
+		rsp.getPhones().forEach(s -> {
+			PhoneDTO ph = new PhoneDTO();
+			ph.setNumber(s.getNumber());
+			ph.setCityCode(s.getCityCode());
+			ph.setCountryCode(s.getCountryCode());
+			phrespond.add(ph);
+		});
+		userRespond.setPhones(phrespond);
+		return userRespond;
 	}
 }
  

@@ -21,9 +21,9 @@ public class ControllerUser {
 	
 	@PostMapping("/create")
 	@ResponseBody
-	public ResponseEntity<HttpStatus> createUser(@RequestBody UserDTO user) throws Exception {
+	public ResponseEntity<UserDTO> createUser(@RequestBody UserDTO user) throws Exception {
 		
-		userService.createUser(user);
-		return ResponseEntity.ok(HttpStatus.OK);
+		UserDTO respond = userService.createUser(user);
+		return new ResponseEntity<UserDTO>(respond, HttpStatus.OK);
 	}
 }
