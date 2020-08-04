@@ -2,43 +2,31 @@ package com.test.globallogic.dto;
 
 import java.util.List;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+// TODO: Auto-generated Javadoc
+/* (non-Javadoc)
+ * @see java.lang.Object#toString()
+ */
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class UserDTO {
+	
+	/** The id. */
 	private Integer id;
+	
+	/** The name. */
 	private String name;
+	
+	/** The email. */
 	private String email;
+	
+	/** The password. */
 	private String password;
+	
+	/** The phone DTOs. */
 	List<PhoneDTO> phoneDTOs;
-	
-	public Integer getId() {
-		return id;
-	}
-	public void setId(Integer id) {
-		this.id = id;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
-	}
-	public List<PhoneDTO> getPhones() {
-		return phoneDTOs;
-	}
-	public void setPhones(List<PhoneDTO> phoneDTOs) {
-		this.phoneDTOs = phoneDTOs;
-	}
-	
-	
 }

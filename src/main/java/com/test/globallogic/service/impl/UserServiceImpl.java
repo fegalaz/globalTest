@@ -32,7 +32,7 @@ public class UserServiceImpl implements UserService {
 		newUser.setName(userResquest.getName());
 		newUser.setPassword(userResquest.getPassword());
 		newUser.setCreated(LocalDateTime.now());
-		List<PhoneDTO> listPhones = userResquest.getPhones();
+		List<PhoneDTO> listPhones = userResquest.getPhoneDTOs();
 		Set<Phones> newPhones = new HashSet<Phones>();
 		listPhones.forEach(s -> {
 			Phones phs = new Phones();
@@ -58,7 +58,7 @@ public class UserServiceImpl implements UserService {
 			ph.setCountryCode(s.getCountryCode());
 			phrespond.add(ph);
 		});
-		userRespond.setPhones(phrespond);
+		userRespond.setPhoneDTOs(phrespond);
 		return userRespond;
 	}
 }
