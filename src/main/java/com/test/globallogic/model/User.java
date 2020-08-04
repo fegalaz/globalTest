@@ -1,6 +1,5 @@
 package com.test.globallogic.model;
 
-import java.sql.Date;
 import java.time.LocalDateTime;
 import java.util.Set;
 
@@ -12,6 +11,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotBlank;
+
 
 
 @Entity
@@ -23,15 +27,19 @@ public class User {
 	private Integer id;
 	
 	@Column(name = "name")
+	@NotNull
 	private String name;
 	
 	@Column(name = "email")
+	@NotNull
 	private String email;
 	
 	@Column(name = "password")
+	@NotNull
 	private String password;
 	
 	@Column(name = "created")
+	@NotNull
 	private LocalDateTime created;
 	
 	@OneToMany(

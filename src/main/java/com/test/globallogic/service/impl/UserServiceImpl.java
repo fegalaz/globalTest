@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.logging.Logger;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,9 +20,11 @@ import com.test.globallogic.service.UserService;
 @Service
 public class UserServiceImpl implements UserService {
 
+	private final static Logger LOGGER = Logger.getLogger(UserServiceImpl.class.getName());
+
 	@Autowired
 	private UserRepository userRepository;
-	
+
 	@Override
 	public UserDTO createUser(UserDTO userResquest) {
 		User newUser = new User();
@@ -39,8 +42,9 @@ public class UserServiceImpl implements UserService {
 			newPhones.add(phs);
 			newUser.setPhones(newPhones);
 		});
+		LOGGER.info("Metodo que crea el usuario en la BD {userRepository.save}");
 		User rsp = userRepository.save(newUser);
-		
+
 		UserDTO userRespond = new UserDTO();
 		userRespond.setId(rsp.getId());
 		userRespond.setEmail(rsp.getEmail());
@@ -58,4 +62,3 @@ public class UserServiceImpl implements UserService {
 		return userRespond;
 	}
 }
- 
