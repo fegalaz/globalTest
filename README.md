@@ -1,8 +1,8 @@
-## globalTest
+# globalTest
 
 Proyecto cuya finalidad es exponer una API RESTful de creacion de usuarios , el usuario sera creado en un banco de memoria H2.
 
-# Tecnologías ocupadas en el desarrollo:
+## Tecnologías ocupadas en el desarrollo:
 
 * Spring Framework 
 * Tomcat (Embebido)
@@ -16,11 +16,11 @@ Proyecto cuya finalidad es exponer una API RESTful de creacion de usuarios , el 
 * Gradle
 * Java 8
 
-# Instalacion:
+## Instalacion:
  
 Se debe clonar el repositorio GitHub, luego importarlo como un proyecto como Gradle , y luego se debe compilar el proyecto con build que facilita el IDE utilizado.
 
-# DataBase
+## DataBase
 
 La base de datos se crea al momento de correr la aplicacion , la estructura tambien se crea al momento de correr la aplicacion , la estructura la cual va a ser utilizada por la api de creacion de usuarios se encuentra en la siguiente ruta:
 
@@ -65,7 +65,7 @@ spring:
 
 El tag `url : jdbc:h2:file:C:/Users/Felipe Galaz/test` deberia ser modificado por una ruta de la maquina donde se levantara dicho proyecto.
 
-# Despliegue
+## Despliegue
 
 * Desde consola
 	Para poder desplegar el proyecto por consola debemos posicionarnos dentro de la carpeta del proyecto y ejecutar el comando *./gradlew bootRun*
@@ -95,6 +95,6 @@ Una vez que el proyecto este corriendo en la maquina local , la aplicacion sera 
 ]
 }`
 
-# Autores
+## Autores
 
 *Felipe Galaz*
