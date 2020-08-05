@@ -20,6 +20,10 @@ Proyecto cuya finalidad es exponer una API RESTful de creacion de usuarios , el 
  
 Se debe clonar el repositorio GitHub, luego importarlo como un proyecto como Gradle , y luego se debe compilar el proyecto con build que facilita el IDE utilizado.
 
+Para clonar el repositorio debemos abrir una consola y luego escribir git clone <nombre del repositorio> ej:
+	
+	* git clone git@github.com:fegalaz/globalTest.git
+
 ## DataBase
 
 La base de datos se crea al momento de correr la aplicacion , la estructura tambien se crea al momento de correr la aplicacion , la estructura la cual va a ser utilizada por la api de creacion de usuarios se encuentra en la siguiente ruta:
