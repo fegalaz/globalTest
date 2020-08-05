@@ -120,3 +120,5 @@ Una vez que el proyecto este corriendo en la maquina local , la aplicacion sera 
 ## Autores
 
 *Felipe Galaz*
+
+NOTA : El usuario amariscl es un usuario de mi maquina linux , ya que en esa maquina tengo intellij
