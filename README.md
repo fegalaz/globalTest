@@ -4,17 +4,17 @@ Proyecto cuya finalidad es exponer una API RESTful de creacion de usuarios , el 
 
 Tecnologías ocupadas en el desarrollo:
 
-· Spring Framework 
-· Tomcat (Embebido)
-· Spring Boot
-· Spring Data JPA
-· Spring WEB
-· Hibernate como persistencia
-· Hibernate Validator
-· H2 DataBase 
-· Lombok
-· Gradle
-· Java 8
+* Spring Framework 
+* Tomcat (Embebido)
+* Spring Boot
+* Spring Data JPA
+* Spring WEB
+* Hibernate como persistencia
+* Hibernate Validator
+* H2 DataBase 
+* Lombok
+* Gradle
+* Java 8
 
 Instalacion:
  
