@@ -26,9 +26,9 @@ La base de datos se crea al momento de correr la aplicacion , la estructura tamb
 
 * /GlobalLogic/src/main/resources/data.sql
 
-`DROP TABLE IF EXISTS user;
+`DROP TABLE IF EXISTS user;`
  
-CREATE TABLE user (
+`CREATE TABLE user (
   id INT AUTO_INCREMENT  PRIMARY KEY,
   name VARCHAR(250) NOT NULL,
   email VARCHAR(250) NOT NULL,
@@ -36,9 +36,9 @@ CREATE TABLE user (
   created DATE NOT NULL,
   modified DATE NOT NULL,
   isactive char NOT NULL
-);
+);`
 
-CREATE TABLE phones (
+`CREATE TABLE phones (
   number VARCHAR(250) NOT NULL,
   cityCode VARCHAR(250) NOT NULL,
   countryCode VARCHAR(250) DEFAULT NULL
