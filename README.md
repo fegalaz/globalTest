@@ -84,8 +84,7 @@ Una vez que el proyecto este corriendo en la maquina local , la aplicacion sera 
 
 * Method : POST
 
-*JSON Request
-
+* JSON Request
 `{
 	"name": "Juan Rodriguez",
 	"email": "asasasa@rodriguez.org",
@@ -97,6 +96,25 @@ Una vez que el proyecto este corriendo en la maquina local , la aplicacion sera 
 		"countryCode": "57"
 	}
 ]
+}`
+
+
+# JSON Respond
+`{
+    "id": 1,
+    "name": "Juan Rodriguez",
+    "email": "hjjhjhj@rodriguez.org",
+    "password": "Hunt12",
+    "created": "2020-08-05T17:04:57.827",
+    "lastLogin": "2020-08-05T17:04:57.827",
+    "isActive": 1,
+    "phoneDTOs": [
+        {
+            "number": "1234567",
+            "cityCode": "1",
+            "countryCode": "57"
+        }
+    ]
 }`
 
 ## Autores
