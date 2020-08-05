@@ -33,7 +33,7 @@ public class ControllerUser {
 	
 	@PostMapping("/create")
 	@ResponseBody
-	public ResponseEntity<?> createUser(@RequestBody UserDTO user) throws Exception {
+	public ResponseEntity<?> createUser(@RequestBody UserDTO user) {
 		
 		/*Valida Email*/
 		if(validateMail.isValid(user.getEmail())){
@@ -47,13 +47,12 @@ public class ControllerUser {
 			LOGGER.info("Password validated correctly");
 		}else {
 			LOGGER.info("Error parametro password");
-			return new ResponseEntity<String>("Debe contener al menos una mayúscula, letras minúsculas, y dos números",HttpStatus.BAD_REQUEST);
+			return new ResponseEntity<String>("Debe contener al menos una mayuscula, letras minusculas, y dos numeros",HttpStatus.BAD_REQUEST);
 		}
 		
 		LOGGER.info("{userService.createUser}");
 		UserDTO respond = userService.createUser(user);
 		return new ResponseEntity<UserDTO>(respond, HttpStatus.OK);
 	}
-	
 	
 }

@@ -6,8 +6,8 @@ CREATE TABLE user (
   email VARCHAR(250) NOT NULL,
   password VARCHAR(250) DEFAULT NULL,
   created DATE NOT NULL,
-  modified DATE NOT NULL,
-  isactive char NOT NULL
+  lastLogin DATE NOT NULL,
+  isActive char NOT NULL
 );
 
 CREATE TABLE phones (

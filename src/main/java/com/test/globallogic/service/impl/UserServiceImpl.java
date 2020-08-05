@@ -27,11 +27,15 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public UserDTO createUser(UserDTO userResquest) {
+				
+		
 		User newUser = new User();
 		newUser.setEmail(userResquest.getEmail());
 		newUser.setName(userResquest.getName());
 		newUser.setPassword(userResquest.getPassword());
 		newUser.setCreated(LocalDateTime.now());
+		newUser.setLastLogin(LocalDateTime.now());
+		newUser.setIsActive(1);
 		List<PhoneDTO> listPhones = userResquest.getPhoneDTOs();
 		Set<Phones> newPhones = new HashSet<Phones>();
 		listPhones.forEach(s -> {
@@ -50,6 +54,9 @@ public class UserServiceImpl implements UserService {
 		userRespond.setEmail(rsp.getEmail());
 		userRespond.setName(rsp.getName());
 		userRespond.setPassword(rsp.getPassword());
+		userRespond.setLastLogin(rsp.getLastLogin());
+		userRespond.setIsActive(rsp.getIsActive());
+		userRespond.setCreated(rsp.getCreated());
 		List<PhoneDTO> phrespond = new ArrayList<>();
 		rsp.getPhones().forEach(s -> {
 			PhoneDTO ph = new PhoneDTO();
@@ -60,5 +67,9 @@ public class UserServiceImpl implements UserService {
 		});
 		userRespond.setPhoneDTOs(phrespond);
 		return userRespond;
+	}
+	
+	public boolean existMail(String mail) {		
+		return userRepository.findByEmail(mail);
 	}
 }

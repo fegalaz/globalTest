@@ -44,6 +44,14 @@ public class User {
 	@NotNull
 	private LocalDateTime created;
 	
+	@Column(name = "lastLogin")
+	@NotNull
+	private LocalDateTime lastLogin;
+	
+	@Column(name = "isActive")
+	@NotNull
+	private Integer isActive;
+	
 	@OneToMany(
 	        mappedBy = "user",
 	        cascade = CascadeType.ALL,

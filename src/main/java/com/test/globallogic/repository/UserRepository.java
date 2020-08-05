@@ -9,4 +9,6 @@ import com.test.globallogic.model.User;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
 	User save(UserDTO user);
+	
+	boolean findByEmail(String mail);
 }
