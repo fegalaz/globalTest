@@ -1,6 +1,24 @@
 # globalTest
 
-Proyecto el cual crea un usuario enviando en JSON Request , el usuario sera creado en memoria H2 con FrameWork Springy y persistencia Hibernate con Spring JPA.
+Proyecto cuya finalidad es exponer una API RESTful de creacion de usuarios , el usuario sera creado en un banco de memoria H2.
+
+Tecnologías ocupadas en el desarrollo:
+
+· Spring Framework 
+· Tomcat (Embebido)
+· Spring Boot
+· Spring Data JPA
+· Spring WEB
+· Hibernate como persistencia
+· Hibernate Validator
+· H2 DataBase 
+· Lombok
+· Gradle
+· Java 8
+
+Instalacion:
+ 
+Se debe clonar el repositorio GitHub, luego importarlo como un proyecto como Gradl , y Luego se debe compilar el proyecto con build que facilita el IDE utilizado.
 
 
 #URL : localhost:9090/user/create
